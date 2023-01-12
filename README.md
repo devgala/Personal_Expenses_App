@@ -1,16 +1,6 @@
-# personal_expenses
+# Personal Expenses App
 
-A new Flutter project.
+My First Flutter Project
 
-## Getting Started
+This app is aimed to track transactions. Transactions can be added with a date and the app also gives a chart that keeps track of credit and debit amount for each day of the past 7 days. It has a basic UI and can store and delete transactions. Database used : SQLite
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
