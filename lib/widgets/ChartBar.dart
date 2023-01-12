@@ -13,7 +13,7 @@ class ChartBar extends StatelessWidget {
     return Column(
       children: <Widget>[
         Text('+$credit'),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         Container(
@@ -24,7 +24,7 @@ class ChartBar extends StatelessWidget {
                 (credit == 0 && debit == 0) ? Container(
                     decoration:  BoxDecoration(
                       border: Border.all(color: Colors.grey, width: 1.0),
-                      color: Color.fromRGBO(220, 220, 220, 1),
+                      color: const Color.fromRGBO(220, 220, 220, 1),
                       borderRadius: BorderRadius.circular(10),
 
                     )
@@ -50,11 +50,11 @@ class ChartBar extends StatelessWidget {
               ],
             ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         Text('$debit'),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
 

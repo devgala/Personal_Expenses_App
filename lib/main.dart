@@ -100,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     final appBar = AppBar(
       backgroundColor: Colors.deepPurple,
-      title: Text("Personal Expenses"),
+      title: const Text("Personal Expenses"),
       actions: <Widget>[
         IconButton(
             onPressed: () {
@@ -144,14 +144,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Text('No Transactions Found',
-                        style: const TextStyle(
+                    const Text('No Transactions Found',
+                        style: TextStyle(
                             fontFamily: 'Raleway',
                             fontWeight: FontWeight.bold,
                             fontSize: 25,
                             color: Colors.grey)),
                     Container(
-                        margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                        margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                         height: 50,
                         child: Image.asset(
                           'assets/images/empty.png',
@@ -168,14 +168,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text('No Transactions Found',
-                      style: const TextStyle(
+                  const Text('No Transactions Found',
+                      style: TextStyle(
                           fontFamily: 'Raleway',
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
                           color: Colors.grey)),
                   Container(
-                      margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                      margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                       height: 50,
                       child: Image.asset(
                         'assets/images/empty.png',
@@ -188,49 +188,14 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
 
-      // (transactionList.isEmpty)
-      //     ?
-      //           Center(
-      //             child: Column(
-      //               mainAxisAlignment: MainAxisAlignment.center,
-      //                 crossAxisAlignment: CrossAxisAlignment.center,
-      //               children: <Widget>[
-      //
-      //
-      //                      Text('No Transactions Found',
-      //                         style: const TextStyle(
-      //                             fontFamily: 'Raleway',
-      //                             fontWeight: FontWeight.bold,
-      //                             fontSize: 25,
-      //                             color: Colors.grey)),
-      //                 Container(margin : EdgeInsets.fromLTRB(0, 10, 0, 0),height : 50,child: Image.asset('assets/images/empty.png',fit: BoxFit.cover,)),
-      //               ],
-      //             ),
-      //           )
-      //
-      //
-      //     : SingleChildScrollView(
-      //         child: Column(
-      //           children: <Widget>[
-      //             Container(
-      //               width: double.infinity,
-      //               height: (MediaQuery.of(context).size.height - appBar.preferredSize.height -MediaQuery.of(context).padding.top)*(0.32),
-      //               margin: const EdgeInsets.fromLTRB(10, 20, 10, 15),
-      //               child: Chart(_recentTransactions),
-      //             ),
-      //             Container(
-      //                 height: (MediaQuery.of(context).size.height - appBar.preferredSize.height-MediaQuery.of(context).padding.top)*(0.62),
-      //                 child: TransactionList(transactionList,deleteTransaction)),
-      //           ],
-      //         ),
-      //       ),
+
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showInputArea(context);
         },
-        child: Icon(Icons.add),
         backgroundColor: Colors.amber,
+        child: const Icon(Icons.add),
       ),
     );
   }

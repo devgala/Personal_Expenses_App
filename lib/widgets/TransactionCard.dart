@@ -53,32 +53,32 @@ class TransactionCard extends StatelessWidget {
             IconButton(onPressed: (){
               delete(index);
               print('deleted');
-            }, icon: Icon(Icons.delete,color: Colors.red,)),
+            }, icon: const Icon(Icons.delete,color: Colors.red,)),
             Container(
-              padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
                     name,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
                         color: Colors.black87),
                   ),
                   Text(
                     dateTime.toString(),
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                    style: const TextStyle(fontSize: 15, color: Colors.grey),
                   ),
                 ],
               ),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+              padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
               child: CircleAvatar(
                 radius: 30,
-                backgroundColor: Color.fromRGBO(240, 240, 240, 1),
+                backgroundColor: const Color.fromRGBO(240, 240, 240, 1),
                 child: displayText(amount),
               ),
             ),

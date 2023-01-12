@@ -64,7 +64,7 @@ class _ChartState extends State<Chart> {
 
         // margin: EdgeInsets.all(20),
         child: Container(
-          padding: EdgeInsets.fromLTRB(10, 10, 0, 10),
+          padding: const EdgeInsets.fromLTRB(10, 10, 0, 10),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -78,7 +78,7 @@ class _ChartState extends State<Chart> {
                                 as double,
                             data['creditValue'] as int,
                             data['debitValue'] as int),
-                        SizedBox(
+                        const SizedBox(
                           width: 15,
                         ),
                       ],
