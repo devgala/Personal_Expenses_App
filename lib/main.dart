@@ -54,6 +54,15 @@ class _MyHomePageState extends State<MyHomePage> {
       );
     }).toList();
   }
+  List<Transactions> get _recentMonthTransactions {
+    return transactionList.where((element) {
+      return element.dateTime.isAfter(
+        DateTime.now().subtract(
+          Duration(days: 28),
+        ),
+      );
+    }).toList();
+  }
 
   void addTransact(String name, int amount, DateTime dt) {
     final Trx = new Transactions(id: 0,name: name, amount: amount, dateTime: dt);
@@ -79,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void showInputArea(BuildContext ctx) {
     showModalBottomSheet(
         isScrollControlled: true,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(top: Radius.circular(20.0))),
         context: ctx,
         builder: (_) {
@@ -125,9 +134,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: (MediaQuery.of(context).size.height -
                             appBar.preferredSize.height -
                             MediaQuery.of(context).padding.top) *
-                        (0.32),
+                        (0.2),s
                     margin: const EdgeInsets.fromLTRB(10, 20, 10, 15),
-                    child: Chart(_recentTransactions),
+                    child: Chart(_recentTransactions,_recentMonthTransactions),
                   ),
                   Container(
                       height: (MediaQuery.of(context).size.height -
