@@ -4,9 +4,9 @@ import 'package:intl/intl.dart';
 
 Widget displayText(int amount) {
   TextStyle credit = const TextStyle(
-      fontSize: 25, fontWeight: FontWeight.bold, color: Colors.green);
+      fontSize: 25, fontWeight: FontWeight.bold, color: Colors.green,fontFamily: 'Roboto');
   TextStyle debit = const TextStyle(
-      fontSize: 25, fontWeight: FontWeight.bold, color: Colors.redAccent);
+      fontSize: 25, fontWeight: FontWeight.bold, color: Colors.redAccent,fontFamily: 'Roboto',fontStyle: FontStyle.italic);
   if (amount > 0) {
     return FittedBox(
         child: Padding(
@@ -43,8 +43,8 @@ class TransactionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 80,
-      margin: const EdgeInsets.fromLTRB(10, 5, 10, 10),
+      height: 70,
+      margin: const EdgeInsets.fromLTRB(10, 5, 10, 0),
       child: Card(
         elevation: 4,
         child: Row(

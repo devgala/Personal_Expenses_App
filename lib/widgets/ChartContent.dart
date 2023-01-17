@@ -20,6 +20,7 @@ class ChartContent extends StatelessWidget {
                   "This Week: ",
                   style: TextStyle(
                     fontSize: 18,
+                    fontFamily: 'Poppins',
                   ),
                 ),
                 const SizedBox(
@@ -34,10 +35,11 @@ class ChartContent extends StatelessWidget {
                         ),
                       )
                     : Text(
-                        "-\u{20B9}${weeklyTransact.abs()}",
+                        "- \u{20B9}${weeklyTransact.abs()}",
                         style: const TextStyle(
                           fontSize: 35,
                           color: Colors.red,
+                          fontFamily:  '',
                         ),
                       ),
               ],
@@ -51,8 +53,10 @@ class ChartContent extends StatelessWidget {
             children: [
               const Text(
                 "Last 28 Days: ",
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 18,
+                  fontFamily: 'Poppins',
+                 // fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(
@@ -64,13 +68,15 @@ class ChartContent extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 35,
                   color: Colors.green,
+                  fontFamily: '',
                 ),
               )
                   : Text(
-                "-\u{20B9}${monthlyTransact.abs()}",
+                "- \u{20B9}${monthlyTransact.abs()}",
                 style: const TextStyle(
                   fontSize: 35,
                   color: Colors.red,
+                  fontFamily: '',
                 ),
               ),
             ],

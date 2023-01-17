@@ -134,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: (MediaQuery.of(context).size.height -
                             appBar.preferredSize.height -
                             MediaQuery.of(context).padding.top) *
-                        (0.2),s
+                        (0.2),
                     margin: const EdgeInsets.fromLTRB(10, 20, 10, 15),
                     child: Chart(_recentTransactions,_recentMonthTransactions),
                   ),
