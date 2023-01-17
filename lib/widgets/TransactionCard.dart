@@ -4,9 +4,9 @@ import 'package:intl/intl.dart';
 
 Widget displayText(int amount) {
   TextStyle credit = const TextStyle(
-      fontSize: 25, fontWeight: FontWeight.bold, color: Colors.green,fontFamily: 'Roboto');
+      fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green,fontFamily: 'Roboto');
   TextStyle debit = const TextStyle(
-      fontSize: 25, fontWeight: FontWeight.bold, color: Colors.redAccent,fontFamily: 'Roboto',fontStyle: FontStyle.italic);
+      fontSize: 20, fontWeight: FontWeight.bold, color: Colors.redAccent,fontFamily: 'Roboto',fontStyle: FontStyle.italic);
   if (amount > 0) {
     return FittedBox(
         child: Padding(

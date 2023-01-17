@@ -32,6 +32,7 @@ class ChartContent extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 35,
                           color: Colors.green,
+                          fontFamily:  '',
                         ),
                       )
                     : Text(
