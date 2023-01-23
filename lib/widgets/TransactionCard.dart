@@ -9,12 +9,14 @@ Widget displayText(int amount) {
       fontSize: 20, fontWeight: FontWeight.bold, color: Colors.redAccent,fontFamily: 'Roboto',fontStyle: FontStyle.italic);
   if (amount > 0) {
     return FittedBox(
+      fit : BoxFit.fitWidth,
         child: Padding(
       padding: const EdgeInsets.all(5.0),
       child: Text("\u{20B9}$amount", style: credit),
     ));
   } else {
     return FittedBox(
+        fit : BoxFit.fitWidth,
         child: Padding(
       padding: const EdgeInsets.all(5.0),
       child: Text(
@@ -41,6 +43,7 @@ class TransactionCard extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
+
     return Container(
       width: double.infinity,
       height: 70,
@@ -60,12 +63,18 @@ class TransactionCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    name,
-                    style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black87),
+                  SizedBox(
+                    width: 160,
+                    child: Text(
+                      softWrap: false,
+                      maxLines: 1,
+                      overflow: TextOverflow.fade,
+                      name,
+                      style: const TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black87),
+                    ),
                   ),
                   Text(
                     dateTime.toString(),

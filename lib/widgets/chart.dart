@@ -6,7 +6,9 @@ import 'package:personal_expenses/widgets/ChartContent.dart';
 class Chart extends StatefulWidget {
   final List<Transactions> recentTransactions;
   final List<Transactions> monthlyTransactions;
-  Chart(this.recentTransactions,this.monthlyTransactions);
+  final List<Transactions> allTransactions;
+
+  Chart(this.recentTransactions,this.monthlyTransactions,this.allTransactions);
 
 
   @override
@@ -14,6 +16,17 @@ class Chart extends StatefulWidget {
 }
 
 class _ChartState extends State<Chart> {
+
+  int get totalExpense{
+    int total =0;
+    for(int i=0;i<widget.allTransactions.length;i++)
+    {
+      total +=widget.allTransactions[i].amount;
+    }
+    print(total);
+    return total;
+  }
+  _ChartState();
   int get totalMonthlyTransact {
 
     return groupedMonthlyTransactionValues.fold(0, (sum, element) {
@@ -102,7 +115,7 @@ class _ChartState extends State<Chart> {
         // margin: EdgeInsets.all(20),
         child: Container(
           padding: const EdgeInsets.fromLTRB(10, 10, 0, 10),
-          child: ChartContent(totalTransact,totalMonthlyTransact),
+          child: ChartContent(totalTransact,totalMonthlyTransact,totalExpense),
         ),
       ),
     );
