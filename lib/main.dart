@@ -63,7 +63,21 @@ class _MyHomePageState extends State<MyHomePage> {
       );
     }).toList();
   }
+  void editTransact(String name,int amount,int id,DateTime dateTime){
+    final Trx = Transactions(id: id,name: name, amount: amount,dateTime: dateTime);
+    setState(() {
+      var result = transactionList.firstWhere((element) {
+       return element.id == id;
+      });
+    result.name=name;
+    result.amount = amount;
 
+      transactionList.add(result);
+    });
+    transactionHelper.editTransact(Trx);
+    futureList = transactionHelper.getList();
+    print('added');
+  }
   void addTransact(String name, int amount, DateTime dt) {
     final Trx = new Transactions(id: 0,name: name, amount: amount, dateTime: dt);
     setState(() {
@@ -144,11 +158,12 @@ class _MyHomePageState extends State<MyHomePage> {
                               MediaQuery.of(context).padding.top) *
                           (0.62),
                       child:
-                          TransactionList(transactionList, deleteTransaction)),
+                          TransactionList(transactionList, deleteTransaction,editTransact)),
                 ],
               ),
             );}else {
               return Center(
+
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,

@@ -59,5 +59,10 @@ var database = await openDatabase(path,
     print(count);
 
     }
+  Future<void> editTransact(Transactions transactions) async {
+    final db= await getDatabase;
+    var result = await db?.update(tableName, transactions.toMap(),where: '$idCol=?',whereArgs: [transactions.id]);
+    print(result);
 
+  }
 }

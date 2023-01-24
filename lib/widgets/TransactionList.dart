@@ -11,7 +11,8 @@ class TransactionList extends StatelessWidget{
 
   List<Transactions> transactionlist;
 Function deleteTransaction;
-TransactionList(this.transactionlist,this.deleteTransaction);
+Function editTransact;
+TransactionList(this.transactionlist,this.deleteTransaction,this.editTransact);
 
 
   @override
@@ -22,7 +23,7 @@ TransactionList(this.transactionlist,this.deleteTransaction);
 
       child: ListView.builder(
         itemBuilder: (ctx,index){
-          return TransactionCard(transactionlist[transactionlist.length - index-1],transactionlist.length - index-1,deleteTransaction);
+          return TransactionCard(transactionlist[transactionlist.length - index-1],transactionlist.length - index-1,deleteTransaction,editTransact);
         },
         itemCount: transactionlist.length,
       ),

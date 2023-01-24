@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class Transactions {
   final  int  id   ;
-  final String name;
+   String name;
 
-  final int amount;
-  final DateTime dateTime;
+   int amount;
+   DateTime dateTime;
   Transactions(
       {required this.id,required this.name, required this.amount, required this.dateTime});
 
