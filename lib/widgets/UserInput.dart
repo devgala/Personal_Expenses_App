@@ -38,12 +38,15 @@ class UserInputState extends State<UserInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
+
       margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
       height: 420,
       padding: EdgeInsets.all(10),
       child: Card(
+
           elevation: 0,
           child: Column(
+
 //           crossAxisAlignment: CrossAxisAlignment.end,
             //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -157,6 +160,7 @@ class UserInputState extends State<UserInput> {
                   ),
                 ],
               ),
+
               TextButton(
                 onPressed: () {
                   print(nameController.text);
